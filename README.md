@@ -1,6 +1,8 @@
 # Lyrix API
 
 A node.js API that extract synced lyrics from Musixmatch through Spotify.
+Check the source code on how it works, it is well commented/document lol.
+Also do not hestitate to ask me any questions
 
 ## Endpoints
 
