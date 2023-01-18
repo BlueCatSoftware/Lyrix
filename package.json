@@ -1,0 +1,20 @@
+{
+  "name": "lyrix",
+  "version": "1.0.0",
+  "description": "lyric generator",
+  "main": "index.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Ameen",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "node-cache": "^5.1.2",
+    "request": "^2.88.2"
+  },
+  "engines": {
+    "node": "18.13.0"
+  }
+}
