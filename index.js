@@ -14,6 +14,8 @@ app.get('/getLyrics/:trackId', (req, res) => {
         }
     }, (error, response, body) => {
         if (error) {
+            console.log(error);
+            console.log(respone);
             return res.status(500).send(error);
         }
         let json = JSON.parse(body);
