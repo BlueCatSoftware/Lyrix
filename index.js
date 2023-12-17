@@ -32,7 +32,7 @@ app.get('/getLyrics/:trackId', (req, res) => {
             if (error) {
                 return res.status(500).send
             }
-            console.log(respone);
+            console.log(response.body);
             res.send(JSON.stringify(JSON.parse(response.body), null, 2));
         });
     });
