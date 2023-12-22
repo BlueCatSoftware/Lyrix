@@ -34,6 +34,7 @@ code {
     padding: 2px 5px;
     border: 1px solid #ccc;
     border-radius: 4px;
+    word-break: break-word; /* Added to allow code to break onto the next line */
 }
 
 ul {
@@ -63,7 +64,6 @@ example {
 sd {
     font-size: larger;
 }
-
 
 #contact {
     background-color: #fff;
@@ -100,4 +100,27 @@ footer {
     padding: 10px;
     background-color: #333;
     color: #fff;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 600px) {
+    header {
+        padding: 15px;
+    }
+
+    main {
+        margin: 10px;
+    }
+
+    section {
+        padding: 15px;
+    }
+
+    li::before {
+        margin-right: 5px;
+    }
+
+    .telegram-link {
+        padding: 8px 15px;
+    }
 }
