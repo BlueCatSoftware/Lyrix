@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
@@ -12,36 +12,87 @@ header {
     text-align: center;
 }
 
-section {
+main {
     margin: 20px;
-    padding: 20px;
+}
+
+section {
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 20px;
 }
 
-h2 {
+h2, h3, h4 {
     color: #333;
 }
 
 code {
+    font-family: 'Courier New', Courier, monospace;
     background-color: #f8f8f8;
     padding: 2px 5px;
     border: 1px solid #ccc;
     border-radius: 4px;
 }
 
-button {
-    background-color: #4caf50;
-    color: #fff;
-    padding: 10px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+ul {
+    list-style: none;
+    padding-left: 0;
 }
 
-button:hover {
-    background-color: #45a049;
+li {
+    position: relative;
+    margin-bottom: 10px;
+    padding-left: 20px;
+}
+
+li::before {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #4caf50;
+    margin-right: 10px;
+}
+
+example {
+    margin-top: 15px;
+}
+
+sd {
+    font-size: larger;
+}
+
+
+#contact {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+#contact h2 {
+    color: #333;
+}
+
+#contact p {
+    margin-bottom: 15px;
+}
+
+.telegram-link {
+    display: inline-block;
+    background-color: #0088cc;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.telegram-link:hover {
+    background-color: #006699;
 }
 
 footer {
