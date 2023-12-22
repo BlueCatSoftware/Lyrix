@@ -2,8 +2,16 @@ const { response } = require('express');
 const express = require('./node_modules/express');
 const request = require('./node_modules/request');
 const app = express();
+const path = require('path');
 const cookie = process.env.COOKIE;
 
+// Serve static files from the 'public' folder
+app.use(express.static(path.join(__dirname, 'public')));
+
+// New endpoint for serving documentation
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
 
 app.get('/getLyrics/:trackId', (req, res) => {
     request.get({
