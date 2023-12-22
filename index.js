@@ -9,7 +9,7 @@ app.get('/getLyrics/:trackId', (req, res) => {
     request.get({
         url: process.env.TOKEN_URL,
         headers: {
-            "Client-Token": cookie,
+            "Cookie": cookie,
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
         }
     }, (error, response, body) => {
