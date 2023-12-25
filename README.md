@@ -4,6 +4,19 @@ A node.js API that extract synced lyrics from Musixmatch through Spotify.
 Check the source code on how it works, it is well commented/document lol.
 Also do not hestitate to ask me any questions
 
+##Guide
+
+Token Url
+```
+https://open.spotify.com/get_access_token?reason=transport&productType=web_player
+```
+
+
+Lyrics Url
+
+```
+https://spclient.wg.spotify.com/color-lyrics/v2/track/
+```
 ## Endpoints
 
 #### Search lyrics by Track ID
