@@ -13,6 +13,10 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
+app.get('/key', (req, res) => {
+    return res.send("success")
+});
+
 app.get('/getLyrics/:trackId', (req, res) => {
     request.get({
         url: process.env.TOKEN_URL,
