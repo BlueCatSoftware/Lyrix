@@ -33,6 +33,7 @@ app.get('/getLyrics/:trackId', (req, res) => {
         let json = JSON.parse(body);
         let clientId = json.clientId;
         let accessToken = json.accessToken;
+        console.log(accessToken);
 
         request.get({
             url: process.env.LYRICS_BASE_URL + `${req.params.trackId}?format=json&vocalRemoval=false&market=from_token`,
