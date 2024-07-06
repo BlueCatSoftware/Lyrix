@@ -46,6 +46,8 @@ app.get('/getLyrics/:trackId', (req, res) => {
                 return res.status(500).send
             }
             console.log(response.body);
+            
+            res.header("Access-Control-Allow-Origin", "*");
             res.send(JSON.stringify(JSON.parse(response.body), null, 2));
         });
     });
@@ -123,8 +125,10 @@ app.get('/getLyricsByName/:musician/:track', (req, res) => {
                 let trackId = realTrack.id;
 
                 // Use the track ID to make a request to the initial route
+                res.header("Access-Control-Allow-Origin", "*");
                 res.redirect(`/getLyrics/${trackId}`);
-            } else {
+            } else {       
+                res.header("Access-Control-Allow-Origin", "*");
                 res.status(404).send("No Remix lyrics was found");
             }
 
