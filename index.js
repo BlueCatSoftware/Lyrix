@@ -83,7 +83,7 @@ app.get('/getLyricsByName/:musician/:track', (req, res) => {
         let accessToken = json.access_token;
 
         // Build the Spotify API search URL with the musician and track name, and set the limit to 5
-        const searchUrl = process.env.SEARCH_URL + `${req.params.musician}%20track:${req.params.track}&type=track&limit=10`;
+        const searchUrl = process.env.SEARCH_URL + `${encodeURIComponent(req.params.musician)}%20track:${encodeURIComponent(req.params.track)}&type=track&limit=10`;
 
         // Make a GET request to the Spotify API search URL
         request.get({
